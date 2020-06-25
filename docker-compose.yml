@@ -602,6 +602,18 @@ services:
         - "${REDIS_CLUSTER_PORT_RANGE}:7000-7005"
       networks:
         - backend
+        
+##########################################
+    redis-commander:
+      build: ./redis-commander     
+      depends_on:
+        - redis
+      environment: 
+        - REDIS_HOST=${REDIS_STORAGE_SERVER_HOST}
+      ports:
+        - "${REDIS_COMMANDER_PORT}:8081"
+      networks:
+        - backend
 
 ### ZooKeeper #########################################
     zookeeper:

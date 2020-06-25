@@ -321,6 +321,10 @@ REDIS_PORT=6379
 
 REDIS_CLUSTER_PORT_RANGE=7000-7005
 
+### REDIS COMMANDER #########################################
+
+REDIS_COMMANDER_PORT=8081
+
 ### ZooKeeper #############################################
 
 ZOOKEEPER_PORT=2181
